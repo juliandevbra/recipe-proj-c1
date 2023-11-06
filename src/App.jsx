@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './Styles/App.css'
-import Card from './Components/Card'
-import Formulario from './Components/Formulario'
+
+import ClassComponent from './Components/ClassComponent'
+import FuncComponent from './Components/FuncComponent'
 
 function App() {
-
+  const [toggle, setToggle] = useState(false)
   return (
     <>
-      <Formulario />
+    {toggle ? 
+      <ClassComponent/> :
+       <FuncComponent/> 
+    }
+    <button onClick={() => setToggle(!toggle)}>Cambiar a {toggle ? 'Funcion' : 'Clase'}</button>
     </>
   )
 }
