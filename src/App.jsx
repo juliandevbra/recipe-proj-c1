@@ -1,19 +1,15 @@
 import { useState } from 'react'
-
+import DogApi from './Components/DogApi'
+import FetchApi from './Components/FetchApi'
 import './Styles/App.css'
 
-import ClassComponent from './Components/ClassComponent'
-import FuncComponent from './Components/FuncComponent'
 
 function App() {
-  const [toggle, setToggle] = useState(false)
+
   return (
     <>
-    {toggle ? 
-      <ClassComponent/> :
-       <FuncComponent/> 
-    }
-    <button onClick={() => setToggle(!toggle)}>Cambiar a {toggle ? 'Funcion' : 'Clase'}</button>
+      {/* <FetchApi/>  */}
+      <DogApi/>
     </>
   )
 }
