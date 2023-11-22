@@ -15,7 +15,7 @@ const RecipeDetail = () => {
     }, [])
 
   return (
-    <div>
+    <div className='list'>
         <h3>{recipe.title}</h3>
         <img src={recipe.image} alt="" />
         <p>{recipe.instructions}</p>
